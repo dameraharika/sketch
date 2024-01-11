@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Image to Sketch</title>
+</head>
+<body>
+    <h1>Image to Sketch Converter</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Convert to Sketch</button>
+    </form>
+    {% if sketch_image %}
+        <h2>Sketch Result</h2>
+        <img src="{{ url_for('static', filename='sketch.png') }}" alt="Sketch">
+    {% endif %}
+</body>
+</html>
