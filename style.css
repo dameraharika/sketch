@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+img {
+    max-width: 100%;
+    margin-top: 20px;
+}
